@@ -1,0 +1,26 @@
+﻿@model ProjetoFinalFelipe.Models.Usuario
+@{
+    Layout = null;
+}
+<div class="text-center">
+    <link rel=" stylesheet" href="~/css/Usuario.css" />
+    <form asp-action="Login" class="tudo">
+        <span class="textinho">Felps Labs</span>
+        <div>
+            <label asp-for="Email"></label>
+            <input class="barra" asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Senha"></label>
+            <input class="barra" asp-for="Senha" type="password" />
+            <span asp-validation-for="Senha"></span>
+        </div>
+        <br />
+        <div>
+            <input type="submit" class="botao" value="Entrar" />
+        </div>
+        <br />
+        <span class="texto">@ViewBag.Mensagem</span>
+    </form>
+</div>

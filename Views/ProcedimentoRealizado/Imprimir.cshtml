@@ -1,0 +1,30 @@
+﻿@model ProjetoFinalFelipe.Models.ProcedimentoRealizado
+
+@{
+    Layout = null;
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimento</title>
+    <link rel="stylesheet" href="~/css/Style.css">
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>Clinica Felps</h1>
+        </div>
+    </div>
+    <div class="descricao">
+        <h3>Nome do Paciente: @Html.DisplayFor(model => model.Cliente.ClienteName)</h3>
+        <h3>Sexo: @Html.DisplayFor(model => model.Cliente.ClienteSexo) </h3>
+        <h3>Cpf: @Html.DisplayFor(model => model.Cliente.ClienteCpf)</h3>
+    </div>
+    <div class="datas">
+        <Span>Local do procedimento: @Html.DisplayFor(model => model.LocalRealizacao.LocalNome)</Span>
+    </div>
+    <div class="exame">
+        <Span>Procedimento: @Html.DisplayFor(model => model.Procedimento.Name)</Span>
+    </div>
+    <span class="profissional">Responsavel pelo procedimento: @Html.DisplayFor(model => model.Colaborador.ColaboradorNome)</span>
+</body>  
